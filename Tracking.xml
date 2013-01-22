@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrackingData>
+    <Sensors>
+        <Sensor subtype="ML3D" type="FeatureBasedSensorSource">
+            <SensorID>FeatureBasedSensorSource_0</SensorID>
+            <Parameters>
+                <featuredescriptoralignment>gravity</featuredescriptoralignment>
+            </Parameters>
+            <SensorCOS>
+                <SensorCosID>571158eac8d9be7a5b45760d64a5faac</SensorCosID>
+                <parameters>
+                    <!-- SourceSensorID to distinguish where this cos comes from -->
+                    <sourcesensorid>FeatureTracking1</sourcesensorid>
+                    <minmatches>20</minmatches>
+                    <mintrackingmatches>20</mintrackingmatches>
+                    <numextensiblefeatures>400</numextensiblefeatures>
+                    <usetriangulation>1</usetriangulation>
+                    <gravityvector>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>-1.0</z>
+                    </gravityvector>
+                    <gravitytoleranceangle>20.0</gravitytoleranceangle>
+                    <map>571158eac8d9be7a5b45760d64a5faac.f3b</map>
+                </parameters>
+            </SensorCOS>
+        </Sensor>
+    </Sensors>
+    <Connections>
+        <COS>
+            <Name>COS_1</Name>
+            <Fuser type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.5</AlphaRotation>
+                    <AlphaTranslation>0.8</AlphaTranslation>
+                    <GammaRotation>0.5</GammaRotation>
+                    <GammaTranslation>0.8</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource trigger="1">
+                <SensorID>FeatureBasedSensorSource_0</SensorID>
+                <SensorCosID>571158eac8d9be7a5b45760d64a5faac</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <w>1</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+    </Connections>
+</TrackingData>
